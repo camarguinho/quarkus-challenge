@@ -1,3 +1,19 @@
+# Deploy instructions
+
+Build (skipping tests, problems on codeready enviroment)
+
+```shell script
+./mvnw clean package -DskipTests
+```
+
+Deploy to Openshift
+
+```shell script
+oc start-build quarkus-challenge --from-dir=target/quarkus-app
+```
+
+---
+
 # quarkus-challenge Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
